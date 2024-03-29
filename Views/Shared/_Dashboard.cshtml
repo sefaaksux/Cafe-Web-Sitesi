@@ -63,7 +63,9 @@
                         
                             <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="aperatifler">Aperatifler</a> 
                                           
-                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="tavuk">Tavuk Yemekleri</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="tavukYemekleri">Tavuk Yemekleri</a>
+
+
                         <a class="collapse-item" href="cards.html">Et Yemekleri</a>
                         <a class="collapse-item" href="buttons.html">Pizzalar</a>
                         <a class="collapse-item" href="cards.html">Makarnalar</a>
@@ -83,8 +85,8 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">YEMEKLER:</h6>
-                        <a class="collapse-item" href="buttons.html">Sıcak İçecekler</a>
-                        <a class="collapse-item" href="cards.html">Soğuk İçecekler</a>             
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="sicakIcecekler">Sıcak İçecekler</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="sogukIcecekler">Soğuk İçecekler</a>             
                     </div>
                 </div>
             </li>

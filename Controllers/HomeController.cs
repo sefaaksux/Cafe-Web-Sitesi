@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using admin_panel.Models;
 using admin_panel.Data;
 using admin_panel.Entity;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace admin_panel.Controllers;
 
@@ -22,33 +24,29 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Update(int id, string category)
-    {
-        return View();
+    [HttpGet]
+    public async Task<IActionResult> Update(int id)
+    {   
+        var product =await _context.urunler.FindAsync(id);
+
+        if (product == null)
+        {
+            return NotFound(); // Ürün bulunamazsa hata sayfasına yönlendirme yapabilirsiniz
+        }
+
+        return View(product);
     }
 
-    public IActionResult Menu(string category)
+    public async Task<IActionResult> Menu(string category)
     {
-            // object menuItems = null;
-            object deger = null;
- 
-            // İstenen kategoriye göre verileri al
-            switch (category)
-            {
-                case "aperatifler":
-                    deger = _context.aperatifler.Cast<object>().ToList();
-                    ViewBag.Category = "aperatifler";
-                    break;
-                case "tavuk":
-                    deger = _context.tavuklar.Cast<object>().ToList();
-                    ViewBag.Category = "tavuklar";
-                    break;
-                // Diğer kategoriler için gerekli case'leri ekle
-                default:
-                    return NotFound(); // Geçersiz kategori isteği durumunda 404 döndür
-            }
+        
 
-            return View(deger); // View'e verileri gönder
+        var filteredProduct = await _context.urunler
+                            .Include(x => x.Tablo)
+                            .Where(x => x.Tablo.tabloName == category)
+                            .ToListAsync();
+
+        return View(filteredProduct);
     }  
 
 }

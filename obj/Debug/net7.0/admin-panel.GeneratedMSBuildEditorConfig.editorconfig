@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\sefaa\OneDrive\Masaüstü\admin-panel
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/AdminIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbkluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/login.cshtml]

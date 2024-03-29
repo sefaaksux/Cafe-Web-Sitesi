@@ -2,6 +2,34 @@
     Layout = "_Dashboard";
     ViewData["Title"] = "Home Page";
 }
+@model Urun
 
-<h1>Update</h1>
+    <div class="row">
+        <div class="col-md-8" style="align-items:center;">
+            <form class="form mt-3" asp-action="Update" asp-controller="Home" method="post">
+                <input type="hidden" asp-for="Id" /> <!-- Ürün ID'si (gizli alan) -->
+            
+                <div class="form-group">
+                    <label asp-for="Name">Ürün Adı</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            
+                <div class="form-group">
+                    <label asp-for="Description">Açıklama</label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+        
+                <div class="form-group">
+                    <label asp-for="Amount">Fiyat</label>
+                    <textarea asp-for="Amount" class="form-control"></textarea>
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+          
+                <button type="submit" class="btn btn-primary">Güncelle</button>
+            </form>
+        </div>
+    </div>
+    
 

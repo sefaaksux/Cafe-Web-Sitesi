@@ -1,10 +1,10 @@
 ﻿@using admin_panel.Entity
 @using admin_panel.Data
 @using admin_panel.Models
-@model dynamic
+@model IEnumerable<Urun>
 @{
     Layout = "_Dashboard";
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Ürünler";
 }
 
 <h1 style="text-align: center;">Aperatifler</h1>
@@ -26,7 +26,7 @@
             </div>
             <div class="card-footer">
                 <button class="btn btn-danger">@item.Amount TL</button>
-                <a class="btn btn-primary" href="@Url.Action("Update","Home",new {id= item.Id, category= ViewBag.Category})">Güncelle</a>
+                <a class="btn btn-primary" asp-action="Update" asp-controller="Home" asp-route-id="@item.Id" >Güncelle</a>
             </div>
         </div>
     

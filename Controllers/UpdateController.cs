@@ -9,24 +9,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace admin_panel.Controllers;
 
-public class HomeController : Controller
+public class UpdateController : Controller
 {
     private readonly MyContext _context;
-    public HomeController(MyContext context)
+
+    public UpdateController(MyContext context)
     {
         _context = context;
     }
-    public IActionResult AdminIndex()
-    {
-        return View();
-    }
-    public IActionResult login()
-    {
-        return View();
-    }
+
 
     [HttpGet]
-    public async Task<IActionResult> Update(int id)
+    public async Task<IActionResult> Index(int id)
     {   
         var product =await _context.urunler
                     .Include(x => x.Tablo)
@@ -44,20 +38,8 @@ public class HomeController : Controller
        return View(product);
     }
 
-    public async Task<IActionResult> Menu(string category)
-    {
-        ViewBag.category = category;
-
-        var filteredProduct = await _context.urunler
-                            .Include(x => x.Tablo)
-                            .Where(x => x.Tablo.tabloName == category)
-                            .ToListAsync();
-
-        return View(filteredProduct);
-    }  
-
     [HttpPost]
-    public async Task<IActionResult> Update(Urun model, int id)
+    public async Task<IActionResult> Index(Urun model, int id)
     {
             if(id != model.Id)
             {

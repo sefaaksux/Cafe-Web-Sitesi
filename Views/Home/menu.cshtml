@@ -7,8 +7,9 @@
     ViewData["Title"] = "Ürünler";
 }
 
-<h1 style="text-align: center;">Aperatifler</h1>
+<h1 style="text-align: center;">@ViewBag.category</h1>
 <hr>
+<a asp-controller="Create" asp-action="Index" class="btn btn-primary ml-3">Yeni Ekle</a>
 <div class="row">
 @foreach(var item in Model)
 {
@@ -26,7 +27,7 @@
             </div>
             <div class="card-footer">
                 <button class="btn btn-danger">@item.Amount TL</button>
-                <a class="btn btn-primary" asp-action="Update" asp-controller="Home" asp-route-id="@item.Id" >Güncelle</a>
+                <a class="btn btn-primary" asp-action="Update" asp-controller="Update" asp-route-id="@item.Id" >Güncelle</a>
             </div>
         </div>
     

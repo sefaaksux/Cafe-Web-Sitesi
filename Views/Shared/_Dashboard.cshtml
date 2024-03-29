@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="~/css/sb-admin-2.min.css" rel="stylesheet">
-
+    @RenderSection("Styles", required: false)
 </head>
 
 <body id="page-top">
@@ -66,12 +66,12 @@
                         <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="tavukYemekleri">Tavuk Yemekleri</a>
 
 
-                        <a class="collapse-item" href="cards.html">Et Yemekleri</a>
-                        <a class="collapse-item" href="buttons.html">Pizzalar</a>
-                        <a class="collapse-item" href="cards.html">Makarnalar</a>
-                        <a class="collapse-item" href="buttons.html">Sandviçler</a>
-                        <a class="collapse-item" href="cards.html">Çorbalar</a>
-                        <a class="collapse-item" href="buttons.html">Salatalar</a>               
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="etYemekler">Et Yemekleri</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="pizzalar">Pizzalar</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="makarnalar">Makarnalar</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="sandvicler">Sandviçler</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="corbalar">Çorbalar</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="salatalar">Salatalar</a>               
                     </div>
                 </div>
             </li>
@@ -100,15 +100,15 @@
                 <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">YEMEKLER:</h6>
-                        <a class="collapse-item" href="buttons.html">Fıçı Biralar</a>
-                        <a class="collapse-item" href="cards.html">Şişe Biralar</a>
-                        <a class="collapse-item" href="buttons.html">Şaraplar</a>
-                        <a class="collapse-item" href="cards.html">Likörler</a>
-                        <a class="collapse-item" href="buttons.html">Vodkalar</a>
-                        <a class="collapse-item" href="cards.html">Vermutlar</a>
-                        <a class="collapse-item" href="buttons.html">Viskiler</a>
-                        <a class="collapse-item" href="cards.html">Cinler</a>
-                        <a class="collapse-item" href="buttons.html">Kokteyl / Shotlar</a>               
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="ficiBiralar">Fıçı Biralar</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="siseBiralar">Şişe Biralar</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="saraplar">Şaraplar</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="likörler">Likörler</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="vodkalar">Vodkalar</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="vermutlar">Vermutlar</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="viskiler">Viskiler</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="cinler">Cinler</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="kokteylShotlar">Kokteyl / Shotlar</a>               
                     </div>
                 </div>
             </li>
@@ -122,8 +122,8 @@
                 <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">YEMEKLER:</h6>
-                        <a class="collapse-item" href="buttons.html">Çerezler</a>
-                        <a class="collapse-item" href="cards.html">Tatlılar</a>              
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="cerezler">Çerezler</a>
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="tatlilar">Tatlılar</a>              
                     </div>
                 </div>
             </li>
@@ -172,6 +172,7 @@
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
                         <a class="collapse-item" href="blank.html">Blank Page</a>
+                       
                     </div>
                 </div>
             </li>

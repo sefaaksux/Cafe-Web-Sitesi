@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mf8oTwmJhGED2kwK80HtwqBUQbvrs3A8NsnzAfy6Dig=",
+  "Hash": "tFocxtH+B/olN92hsiX8PWAZtrlj90THQKFFOY0MrL8=",
   "Source": "admin-panel",
   "BasePath": "_content/admin-panel",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\myCss.css",
+      "SourceId": "admin-panel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\",
+      "BasePath": "_content/admin-panel",
+      "RelativePath": "css/myCss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\myCss.css"
+    },
     {
       "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\sb-admin-2.css",
       "SourceId": "admin-panel",
@@ -1035,6 +1052,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\logo.webp",
+      "SourceId": "admin-panel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\",
+      "BasePath": "_content/admin-panel",
+      "RelativePath": "logo.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.webp"
     },
     {
       "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.js",

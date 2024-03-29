@@ -1,0 +1,6 @@
+.imagem{
+    display: flex;
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    background-color: black;
+}

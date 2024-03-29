@@ -37,7 +37,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" asp-controller="Home" asp-action="Index">
+                <a class="nav-link" asp-controller="Home" asp-action="AdminIndex">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -60,13 +60,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">YEMEKLER:</h6>
-                        <form method="post" action="/Home/GetData">
-                            <a class="collapse-item" asp-controller="Home" asp-action="aperatifler">Aperatifler</a> 
-                            <a class="collapse-item" asp-controller="Home" asp-action="cardMenu">Krepler</a>
-                        </form>
-                       
                         
-                        <a class="collapse-item" href="buttons.html">Tavuk Yemekleri</a>
+                            <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="aperatifler">Aperatifler</a> 
+                                          
+                        <a class="collapse-item" asp-controller="Home" asp-action="Menu"asp-route-category="tavuk">Tavuk Yemekleri</a>
                         <a class="collapse-item" href="cards.html">Et Yemekleri</a>
                         <a class="collapse-item" href="buttons.html">Pizzalar</a>
                         <a class="collapse-item" href="cards.html">Makarnalar</a>

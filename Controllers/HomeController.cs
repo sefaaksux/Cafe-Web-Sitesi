@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using admin_panel.Models;
 using admin_panel.Data;
+using admin_panel.Entity;
 
 namespace admin_panel.Controllers;
 
@@ -12,7 +13,7 @@ public class HomeController : Controller
     {
         _context = context;
     }
-    public IActionResult Index()
+    public IActionResult AdminIndex()
     {
         return View();
     }
@@ -21,31 +22,33 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult aperatifler()
+    public IActionResult Update(int id, string category)
     {
         return View();
     }
 
-    [HttpPost]
-    // public IActionResult GetData(string dataType)
-    // {   
-    //     if(dataType == "aperatifler")
-    //     {
-    //        var data = _context.aperatifler.ToList();
-    //        return PartialView("_CardPartial", data);
-    //     }
-
-    //     if(dataType == "krepler")
-    //     {
-    //        var data = _context.krepler.ToList();
-    //        return PartialView("_CardPartial", data);
-    //     }
-
-    // }
-
-    public IActionResult cardMenu()
+    public IActionResult Menu(string category)
     {
-        return View();
-    }
+            // object menuItems = null;
+            object deger = null;
+ 
+            // İstenen kategoriye göre verileri al
+            switch (category)
+            {
+                case "aperatifler":
+                    deger = _context.aperatifler.Cast<object>().ToList();
+                    ViewBag.Category = "aperatifler";
+                    break;
+                case "tavuk":
+                    deger = _context.tavuklar.Cast<object>().ToList();
+                    ViewBag.Category = "tavuklar";
+                    break;
+                // Diğer kategoriler için gerekli case'leri ekle
+                default:
+                    return NotFound(); // Geçersiz kategori isteği durumunda 404 döndür
+            }
+
+            return View(deger); // View'e verileri gönder
+    }  
 
 }

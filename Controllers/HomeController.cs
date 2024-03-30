@@ -18,6 +18,16 @@ public class HomeController : Controller
     }
     public IActionResult AdminIndex()
     {
+        int yemekCount = _context.urunler.Where(x => x.kategoriId == 1).Count();
+        int alkolCount = _context.urunler.Where(x => x.kategoriId == 2).Count();
+        int icecekCount = _context.urunler.Where(x => x.kategoriId == 3).Count();
+        int extraCount = _context.urunler.Where(x => x.kategoriId == 4).Count();
+
+        ViewBag.yemekCount = yemekCount;
+        ViewBag.alkolCount = alkolCount;
+        ViewBag.icecekCount = icecekCount;
+        ViewBag.extraCount = extraCount;
+
         return View();
     }
     public IActionResult login()

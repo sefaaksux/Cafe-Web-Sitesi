@@ -26,8 +26,9 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button class="btn btn-danger">@item.Amount TL</button>
+                <button class="btn btn-success">@item.Amount TL</button>
                 <a class="btn btn-primary" asp-action="Index" asp-controller="Update" asp-route-id="@item.Id" >Güncelle</a>
+                <a class="btn btn-danger" asp-action="Index" asp-controller="Update" asp-route-id="@item.Id" >Sil</a>
             </div>
         </div>
     

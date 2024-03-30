@@ -44,7 +44,7 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
+            
             <!-- Heading -->
             <div class="sidebar-heading">
                 Arayüz
@@ -202,10 +202,11 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+                    
+                    @RenderBody()
                     <!-- Content Row -->
-                    <div class="row">
-
+                     <!-- Content Row -->
+                    
                        
 
             <!-- Footer -->
@@ -224,7 +225,8 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    @RenderBody()
+   
+    
 
     @RenderSection("JavaScriptt", required: false)
     <!-- Bootstrap core JavaScript-->

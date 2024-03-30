@@ -3,7 +3,6 @@ C:\Users\sefaa\OneDrive\Masaüstü\admin-panel\bin\Debug\net7.0\appsettings.Deve
 C:\Users\sefaa\OneDrive\Masaüstü\admin-panel\bin\Debug\net7.0\appsettings.json
 C:\Users\sefaa\OneDrive\Masaüstü\admin-panel\bin\Debug\net7.0\package-lock.json
 C:\Users\sefaa\OneDrive\Masaüstü\admin-panel\bin\Debug\net7.0\package.json
-C:\Users\sefaa\OneDrive\Masaüstü\admin-panel\bin\Debug\net7.0\vendor\fontawesome-free\package.json
 C:\Users\sefaa\OneDrive\Masaüstü\admin-panel\bin\Debug\net7.0\admin-panel.staticwebassets.runtime.json
 C:\Users\sefaa\OneDrive\Masaüstü\admin-panel\bin\Debug\net7.0\admin-panel.exe
 C:\Users\sefaa\OneDrive\Masaüstü\admin-panel\bin\Debug\net7.0\admin-panel.deps.json

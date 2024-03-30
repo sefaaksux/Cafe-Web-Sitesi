@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace admin_panel.Entity
@@ -10,9 +11,11 @@ namespace admin_panel.Entity
         [Column(TypeName ="decimal(10,2)")]
         public decimal Amount { get; set; }
 
+        [Required(ErrorMessage = "Tablo seçimi zorunludur.")]
         public int tabloId {get; set;}
         public Tablo Tablo {get; set;} = null!;
 
+        [Required(ErrorMessage = "Kategori seçimi zorunludur.")]
         public int kategoriId {get; set;}
         public Kategori Kategori {get; set;}= null!;
     }

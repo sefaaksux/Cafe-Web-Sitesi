@@ -33,8 +33,7 @@ public class UpdateController : Controller
         {
             return NotFound(); // Ürün bulunamazsa hata sayfasına yönlendirme yapabilirsiniz
         }
-
-        
+       
        return View(product);
     }
 
@@ -45,13 +44,10 @@ public class UpdateController : Controller
             {
                return NotFound();
             }
-
                 try
-                {
-                    
+                {                   
                     _context.Update(model);
-                    await _context.SaveChangesAsync();
-                    
+                    await _context.SaveChangesAsync();   
                 }
                 catch (System.Exception)
                 {              
@@ -59,7 +55,7 @@ public class UpdateController : Controller
                 }
             
             
-            return RedirectToAction("AdminIndex");
+            return RedirectToAction("Index","Home");
     }
 
 }

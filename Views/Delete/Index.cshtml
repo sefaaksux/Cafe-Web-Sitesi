@@ -1,0 +1,54 @@
+@{
+    Layout = "_Dashboard";
+    ViewData["Title"] = "Home Page";
+}
+
+@model Urun
+    <h2 style="text-align: center;" class="mt-3" style="font-weight: 900;">SİLMEK</h2>
+    <hr>
+    <div class="row" style="justify-content: center; margin-left: 5px;" >
+        <div class="col-md-11" style="align-items:center;">
+            <form class="form mt-3" asp-action="Delete" asp-controller="Delete" method="post">
+                <input type="hidden" asp-for="Id" /> <!-- Ürün ID'si (gizli alan) -->
+            
+                <div class="form-group">
+                    <label asp-for="Name">Ürün Adı</label>
+                    <input asp-for="Name" class="form-control" readonly/>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            
+                <div class="form-group">
+                    <label asp-for="Description">Açıklama</label>
+                    <textarea asp-for="Description" class="form-control"readonly></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+        
+                <div class="form-group">
+                    <label asp-for="Amount">Fiyat</label>
+                    <input asp-for="Amount" class="form-control"readonly></input>
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <label asp-for="kategoriId" hidden>Kategori</label>
+                    <select hidden id="kategoriSelect" asp-for="kategoriId" asp-items="ViewBag.Kategoriler" class="form-control" style="width: 250px;"disabled>  
+                        <option value="1">Seçiniz</option>                   
+                    </select>
+                    <span asp-validation-for="kategoriId" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="tabloId" hidden>Tablo</label>
+                    <select asp-for="tabloId" hidden class="form-control"  asp-items="ViewBag.Tablolar" style="width: 250px;"disabled>
+                        <option value="1">Seçiniz</option>
+                    </select>
+                    <span asp-validation-for="tabloId" class="text-danger"></span>
+                </div>
+                         
+                <button type="submit" class="btn btn-danger" style="width: 250px;">SİL</button>
+            </form>
+        </div>
+    </div>
+        
+

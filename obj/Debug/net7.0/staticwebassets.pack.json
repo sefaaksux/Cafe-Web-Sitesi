@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css-menu\\MenuStyle.css",
+      "PackagePath": "staticwebassets\\css-menu\\MenuStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css-menu\\style.css",
+      "PackagePath": "staticwebassets\\css-menu\\style.css"
+    },
+    {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\myCss.css",
       "PackagePath": "staticwebassets\\css\\myCss.css"
     },
@@ -15,6 +23,162 @@
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\Sherlock House-Logo (1)_pdf (3).webp",
+      "PackagePath": "staticwebassets\\images\\Sherlock House-Logo (1)_pdf (3).webp"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\about-img.jpg",
+      "PackagePath": "staticwebassets\\images\\about-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\about.jpg",
+      "PackagePath": "staticwebassets\\images\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\cerez2.jpg",
+      "PackagePath": "staticwebassets\\images\\cerez2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\corba.jpg",
+      "PackagePath": "staticwebassets\\images\\corba.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\fbira.jpg",
+      "PackagePath": "staticwebassets\\images\\fbira.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\gin.jpg",
+      "PackagePath": "staticwebassets\\images\\gin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\home-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\home-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\kampanya.jpg",
+      "PackagePath": "staticwebassets\\images\\kampanya.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\kind-5.jpg",
+      "PackagePath": "staticwebassets\\images\\kind-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\likor.jpeg",
+      "PackagePath": "staticwebassets\\images\\likor.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\loc.png",
+      "PackagePath": "staticwebassets\\images\\loc.png"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\logo.webp",
+      "PackagePath": "staticwebassets\\images\\logo.webp"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\aperatif-1.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\aperatif-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\et-1.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\et-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\makarna-1.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\makarna-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\makarna-2.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\makarna-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\makarna-3.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\makarna-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\pissa-2.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\pissa-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\pizza-1.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\pizza-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\shot-1.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\shot-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\t-sote-1.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\t-sote-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\t-sote-2.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\t-sote-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\tatlı-1.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\tatlı-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\tatlı-3.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\tatlı-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\salata.jpg",
+      "PackagePath": "staticwebassets\\images\\salata.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\sarap.jpg",
+      "PackagePath": "staticwebassets\\images\\sarap.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\sbira.jpg",
+      "PackagePath": "staticwebassets\\images\\sbira.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\sicak.jpg",
+      "PackagePath": "staticwebassets\\images\\sicak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\sogukicecek.jpg",
+      "PackagePath": "staticwebassets\\images\\sogukicecek.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\tatli.jpg",
+      "PackagePath": "staticwebassets\\images\\tatli.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\vermut.webp",
+      "PackagePath": "staticwebassets\\images\\vermut.webp"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\viski.jpg",
+      "PackagePath": "staticwebassets\\images\\viski.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\vodka.jpeg",
+      "PackagePath": "staticwebassets\\images\\vodka.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\whatson-img1.jpg",
+      "PackagePath": "staticwebassets\\images\\whatson-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\whatson-img2.jpg",
+      "PackagePath": "staticwebassets\\images\\whatson-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\js\\menujs.js",
+      "PackagePath": "staticwebassets\\js\\menujs.js"
     },
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\lib\\bootstrap\\LICENSE",

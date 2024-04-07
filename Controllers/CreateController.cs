@@ -30,7 +30,7 @@ public class CreateController : Controller
         _context.urunler.Add(urun);
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("AdminIndex","Home");
+        return RedirectToAction("AdminIndex","Admin");
 
     }
 

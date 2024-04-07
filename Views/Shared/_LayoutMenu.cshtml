@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="~/css-menu/MenuStyle.css">
+	<link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.ico">
+
+
+    @RenderSection("style", required: false)
+
+</head>
+
+<body>
+    <div class="mysidebar">
+        <div class="clos-icon">
+            <h1 class="logo-text">Yemek Zamanı</h1>
+            <ion-icon class="menu-clos" name="close-outline"></ion-icon>
+        </div>
+        <div class="mysidebar-menus">
+            <a href="index.html"><ion-icon name="home-outline"></ion-icon>Ana Sayfa</a>
+            <a href="./index.html #hakkımızda"><ion-icon name="people-outline"></ion-icon>Hakkımızda</a>
+            <a href="./index.html #etkinlik"><ion-icon name="notifications-outline"></ion-icon>Etkinlikler</a>
+            <a href="./index.html #iletisim"><ion-icon name="chatbubbles-outline"></ion-icon>İletişim</a>
+            <a href="./Menu.html"><ion-icon name="clipboard-outline"></ion-icon>Menü</a>
+        </div>
+        <div class="mysiderbar-media">
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </div>
+    </div>
+
+    <!-----------------------------------main----------------------------------->
+
+    <div class="mymain">
+        <div class="mymain-navbar">
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+            <div class="logo">
+                <a href="./menu-kampanyalar.html" class="user"><img src="~/images/logo.webp" alt=""></a>
+            </div>
+        </div>
+        <!--main campanings-->
+        <div class="main-campaigns">
+            <div class="main-header">
+                <h2 class="main-title">Kampanyalar</h2>
+            </div>
+
+            <!--main campanings menü-->
+
+            <div class="campanings-wrapper">
+                <a href="./menu-kampanyalar.html">
+                    <div class="campanings-card">
+                        <img class="campanings-img" src="~/images/sbira.jpg" alt="">
+                        <div class="campanings-desc">
+                            <h4>2 Efes Fıçı <br>+ 1 Aperatif</h4>
+                            <p style="text-decoration: line-through;">₺416</p>
+                            <p>₺385</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="./menu-kampanyalar.html">
+                    <div class="campanings-card">
+                        <img class="campanings-img" src="~/images/sbira.jpg" alt="">
+                        <div class="campanings-desc">
+                            <h4>2 Efes Fıçı + 1 Pizza</h4>
+                            <p style="text-decoration: line-through;">₺411</p>
+                            <p>₺380</p>
+                        </div>
+                    </div>
+                </a>
+				<a href="./menu-kampanyalar.html">
+                    <div class="campanings-card">
+                        <img class="campanings-img" src="~/images/softicecek.jpg" alt="">
+                        <div class="campanings-desc">
+                            <h4>Hafta içi her gün saat 10.00-14.00 arasında</h4>
+                            <p>Ana yemeklerin yanında soft içecek üzcretsizdir</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!--main menü-->
+        <div class="main-menus">
+            <div class="main-filter" id="i-menu">
+                <div class="filter-wrapper">
+                    <a asp-controller="Home" asp-action="Kampanyalar">
+                        <div class="filter-card"@RenderSection("idKampanyalar", required: false)>
+                            <div class="filter-icon"@RenderSection("iconKampanyalar", required: false)>
+                                <ion-icon name='gift'></ion-icon>
+                            </div>
+                            <p>Kampanyalar</p>
+                        </div>
+                    </a>
+                    <a asp-controller="Home" asp-action="Yemekler">
+                        <div class="filter-card" @RenderSection("id", required: false)>
+                            <div class="filter-icon" @RenderSection("icon", required: false) >
+                                <ion-icon name="restaurant-outline"></ion-icon>
+                            </div>
+                            <p>Yemekler</p>
+                        </div>
+                    </a>
+					<a asp-controller="Home" asp-action="Alkoller">
+                        <div class="filter-card" @RenderSection("idAlkol", required: false)>
+                            <div class="filter-icon" @RenderSection("iconAlkol", required: false)>
+                                <ion-icon name="beer-outline"></ion-icon>
+                            </div>
+                            <p>Alkoller</p>
+                        </div>
+                    </a>
+                    <a asp-controller="Home" asp-action="Icecekler">
+                        <div class="filter-card" @RenderSection("idIcecekler", required: false)>
+                            <div class="filter-icon" @RenderSection("iconIcecekler", required: false)>
+                                <ion-icon name="wine-outline"></ion-icon>
+                            </div>
+                            <p>İçecekler</p>
+                        </div>
+                    </a>
+                    <a asp-controller="Home" asp-action="Extra">
+                        <div class="filter-card"@RenderSection("idExtra", required: false)>
+                            <div class="filter-icon"@RenderSection("iconExtra", required: false)>
+                                <ion-icon name="nutrition-outline"></ion-icon>
+                            </div>
+                            <p>Extra</p>
+                        </div>
+                    </a>
+                </div>
+                
+                @RenderBody()
+                
+            
+        </div>
+    </div>
+    <script src="~/js/menujs.js"></script>
+	<script>
+		const imenu=document.getElementById("i-menu");
+const idetail=document.getElementById("i-detail");
+window.addEventListener("scroll",()=>{
+    if(window.scrollY > 260){
+        imenu.classList.add("active");
+        idetail.classList.add("active");
+
+    }else{
+        imenu.classList.remove("active");
+        idetail.classList.remove("active");
+    }
+})
+	</script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+</html>

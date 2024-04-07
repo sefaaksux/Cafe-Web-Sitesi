@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\sefaa\OneDrive\Masaüstü\admin-panel
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Admin/AdminIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Admin/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Admin/menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Create/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlYXRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,16 +36,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVsZXRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/AdminIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbkluZGV4LmNzaHRtbA==
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/Alkoller.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGtvbGxlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2dpbi5jc2h0bWw=
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/Extra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeHRyYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/menu.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxtZW51LmNzaHRtbA==
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/Icecekler.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJY2VjZWtsZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/Kampanyalar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLYW1wYW55YWxhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Home/Yemekler.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxZZW1la2xlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Shared/Error.cshtml]
@@ -42,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Shared/_Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Shared/_LayoutMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sefaa/OneDrive/Masaüstü/admin-panel/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -55,7 +55,7 @@ public class UpdateController : Controller
                 }
             
             
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index","Admin");
     }
 
 }

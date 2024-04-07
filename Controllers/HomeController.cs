@@ -6,6 +6,7 @@ using admin_panel.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.IO.Compression;
 
 namespace admin_panel.Controllers;
 
@@ -16,35 +17,36 @@ public class HomeController : Controller
     {
         _context = context;
     }
-    public IActionResult AdminIndex()
+    
+    public IActionResult Index()
     {
-        int yemekCount = _context.urunler.Where(x => x.kategoriId == 1).Count();
-        int alkolCount = _context.urunler.Where(x => x.kategoriId == 2).Count();
-        int icecekCount = _context.urunler.Where(x => x.kategoriId == 3).Count();
-        int extraCount = _context.urunler.Where(x => x.kategoriId == 4).Count();
-
-        ViewBag.yemekCount = yemekCount;
-        ViewBag.alkolCount = alkolCount;
-        ViewBag.icecekCount = icecekCount;
-        ViewBag.extraCount = extraCount;
-
         return View();
     }
-    public IActionResult login()
+    public IActionResult Kampanyalar()
     {
         return View();
     }
 
-    public async Task<IActionResult> Menu(string category)
+    public IActionResult Yemekler()
     {
-        ViewBag.category = category;
+        var Yemekler = _context.urunler.Where(x => x.kategoriId == 1).ToList();
+        return View(Yemekler);
+    }
 
-        var filteredProduct = await _context.urunler
-                            .Include(x => x.Tablo)
-                            .Where(x => x.Tablo.tabloName == category)
-                            .ToListAsync();
+    public IActionResult Icecekler()
+    {
+        return View();
+    }
 
-        return View(filteredProduct);
-    }  
+    public IActionResult Alkoller()
+    {
+        return View();
+    }
+
+    public IActionResult Extra()
+    {
+        return View();
+    }
+    
 
 }

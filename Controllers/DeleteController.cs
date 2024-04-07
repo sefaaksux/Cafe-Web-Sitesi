@@ -57,7 +57,7 @@ public class DeleteController : Controller
                 }
             
             
-            return RedirectToAction("AdminIndex","Home");
+            return RedirectToAction("AdminIndex","Admin");
     }
 
 }

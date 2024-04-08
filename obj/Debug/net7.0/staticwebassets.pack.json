@@ -89,6 +89,10 @@
       "PackagePath": "staticwebassets\\images\\menu-img\\et-1.jpg"
     },
     {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\krep.jpg",
+      "PackagePath": "staticwebassets\\images\\menu-img\\krep.jpg"
+    },
+    {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\makarna-1.jpg",
       "PackagePath": "staticwebassets\\images\\menu-img\\makarna-1.jpg"
     },
@@ -107,6 +111,10 @@
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\pizza-1.jpg",
       "PackagePath": "staticwebassets\\images\\menu-img\\pizza-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\sandvic.webp",
+      "PackagePath": "staticwebassets\\images\\menu-img\\sandvic.webp"
     },
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\shot-1.jpg",
@@ -143,6 +151,10 @@
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\sicak.jpg",
       "PackagePath": "staticwebassets\\images\\sicak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\softicecek.jpg",
+      "PackagePath": "staticwebassets\\images\\softicecek.jpg"
     },
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\sogukicecek.jpg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AnT8hiK7mgA9p6lbdiqx1GWKO5pGW09xiUBrEgTxv6M=",
+  "Hash": "smGfHYCuMP9WM/7Qokr+RIlN1I01GqV4oBHubKHd3dM=",
   "Source": "admin-panel",
   "BasePath": "_content/admin-panel",
   "Mode": "Default",
@@ -374,6 +374,23 @@
       "OriginalItemSpec": "wwwroot\\images\\menu-img\\et-1.jpg"
     },
     {
+      "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\krep.jpg",
+      "SourceId": "admin-panel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\",
+      "BasePath": "_content/admin-panel",
+      "RelativePath": "images/menu-img/krep.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\menu-img\\krep.jpg"
+    },
+    {
       "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\makarna-1.jpg",
       "SourceId": "admin-panel",
       "SourceType": "Discovered",
@@ -457,6 +474,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\menu-img\\pizza-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\sandvic.webp",
+      "SourceId": "admin-panel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\",
+      "BasePath": "_content/admin-panel",
+      "RelativePath": "images/menu-img/sandvic.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\menu-img\\sandvic.webp"
     },
     {
       "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\shot-1.jpg",
@@ -627,6 +661,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\sicak.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\softicecek.jpg",
+      "SourceId": "admin-panel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\",
+      "BasePath": "_content/admin-panel",
+      "RelativePath": "images/softicecek.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\softicecek.jpg"
     },
     {
       "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\sogukicecek.jpg",

@@ -15,6 +15,7 @@ namespace admin_panel.Data
         public DbSet<Tablo> tablolar {get; set;}
 
         public DbSet<Urun> urunler {get; set;}
+        public DbSet<User> users {get; set;}
 
     } 
 }

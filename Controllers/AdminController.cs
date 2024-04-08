@@ -6,34 +6,67 @@ using admin_panel.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace admin_panel.Controllers;
 
 public class AdminController : Controller
 {
+    private bool isUserLoggedIn = false;
     private readonly MyContext _context;
     public AdminController(MyContext context)
     {
         _context = context;
     }
+
+    
+    public IActionResult Index()
+    {
+        return View();
+    }
+    [HttpPost]
+    
+    public IActionResult Index(LoginViewModel model)
+    {
+        if(ModelState.IsValid)
+        {
+            if(!string.IsNullOrEmpty(model.userName) && !string.IsNullOrEmpty(model.password))
+            {
+                var user = _context.users.Any(x => x.userName == model.userName && x.password == model.password);
+                if(user)
+                {
+                    isUserLoggedIn = true;
+                    return View("AdminIndex");
+                }
+                
+            }
+        }
+
+        return View();
+    }
+
+   
     public IActionResult AdminIndex()
     {
-        int yemekCount = _context.urunler.Where(x => x.kategoriId == 1).Count();
-        int alkolCount = _context.urunler.Where(x => x.kategoriId == 2).Count();
-        int icecekCount = _context.urunler.Where(x => x.kategoriId == 3).Count();
-        int extraCount = _context.urunler.Where(x => x.kategoriId == 4).Count();
+        if(isUserLoggedIn)
+        {
+            int yemekCount = _context.urunler.Where(x => x.kategoriId == 1).Count();
+            int alkolCount = _context.urunler.Where(x => x.kategoriId == 2).Count();
+            int icecekCount = _context.urunler.Where(x => x.kategoriId == 3).Count();
+            int extraCount = _context.urunler.Where(x => x.kategoriId == 4).Count();
 
-        ViewBag.yemekCount = yemekCount;
-        ViewBag.alkolCount = alkolCount;
-        ViewBag.icecekCount = icecekCount;
-        ViewBag.extraCount = extraCount;
+            ViewBag.yemekCount = yemekCount;
+            ViewBag.alkolCount = alkolCount;
+            ViewBag.icecekCount = icecekCount;
+            ViewBag.extraCount = extraCount;
 
-        return View();
+            return View();
+        }else{
+            return RedirectToAction("Index");
+        }
+        
     }
-    public IActionResult login()
-    {
-        return View();
-    }
+   
 
     public async Task<IActionResult> Menu(string category)
     {

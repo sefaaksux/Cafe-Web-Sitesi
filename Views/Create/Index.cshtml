@@ -9,23 +9,26 @@
         <div class="col-md-11" style="align-items:center;">
             <form class="form mt-3" asp-action="Index" asp-controller="Create" method="post">
                 <input type="hidden" asp-for="Id" /> <!-- Ürün ID'si (gizli alan) -->
-            
+                
                 <div class="form-group">
                     <label asp-for="Name">Ürün Adı</label>
                     <input asp-for="Name" class="form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
+                    
                 </div>
             
                 <div class="form-group">
                     <label asp-for="Description">Açıklama</label>
                     <textarea asp-for="Description" class="form-control"></textarea>
-                    <span asp-validation-for="Description" class="text-danger"></span>
+                    
+                    
                 </div>
         
                 <div class="form-group">
                     <label asp-for="Amount">Fiyat</label>
                     <input asp-for="Amount" class="form-control"></input>
                     <span asp-validation-for="Amount" class="text-danger"></span>
+                   
                 </div>
 
                 
@@ -34,7 +37,8 @@
                     <select id="kategoriSelect" asp-for="kategoriId" asp-items="ViewBag.Kategoriler" class="form-control" style="width: 250px;">  
                         <option value="1">Seçiniz</option>                   
                     </select>
-                    <span asp-validation-for="kategoriId" class="text-danger"></span>
+                    
+                    
                 </div>
                 
                 <div class="form-group">
@@ -42,7 +46,8 @@
                     <select asp-for="tabloId" class="form-control"  asp-items="ViewBag.Tablolar" style="width: 250px;">
                         <option value="1">Seçiniz</option>
                     </select>
-                    <span asp-validation-for="tabloId" class="text-danger"></span>
+                   
+                    
                 </div>
                 <p>Eğer kategori ve tablo seçimi yapmaz iseniz otomatik olarak "Yemekler" "Aperatifler" alanına kayıt olacaktır.</p>
                 

@@ -20,11 +20,14 @@ public class HomeController : Controller
     
     public IActionResult Index()
     {
-        return View();
+        
+        var Yemekler = _context.urunler.Where(x => x.kategoriId == 1).ToList();
+        return View(Yemekler);
     }
     public IActionResult Kampanyalar()
     {
-        return View();
+        var Kampanyalar = _context.urunler.Where(x => x.kategoriId == 5).ToList();
+        return View(Kampanyalar);
     }
 
     public IActionResult Yemekler()
@@ -35,17 +38,20 @@ public class HomeController : Controller
 
     public IActionResult Icecekler()
     {
-        return View();
+        var Icecekler = _context.urunler.Where(x => x.kategoriId == 3).ToList();
+        return View(Icecekler);
     }
 
     public IActionResult Alkoller()
     {
-        return View();
+        var Alkoller = _context.urunler.Where(x => x.kategoriId == 2).ToList();
+        return View(Alkoller);
     }
 
     public IActionResult Extra()
     {
-        return View();
+         var Extra = _context.urunler.Where(x => x.kategoriId == 4).ToList();
+        return View(Extra);
     }
     
 

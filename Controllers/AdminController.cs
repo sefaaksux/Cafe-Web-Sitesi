@@ -8,15 +8,17 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace admin_panel.Controllers;
 
 public class AdminController : Controller
 {
-    private bool isUserLoggedIn = false;
+
     private readonly MyContext _context;
     public AdminController(MyContext context)
     {
         _context = context;
+     
     }
 
     
@@ -35,7 +37,8 @@ public class AdminController : Controller
                 var user = _context.users.Any(x => x.userName == model.userName && x.password == model.password);
                 if(user)
                 {
-                    isUserLoggedIn = true;
+                   
+                    HttpContext.Session.SetString("IsUserLoggedIn","true");
                     return View("AdminIndex");
                 }
                 
@@ -48,7 +51,7 @@ public class AdminController : Controller
    
     public IActionResult AdminIndex()
     {
-        if(isUserLoggedIn)
+        if(HttpContext.Session.GetString("IsUserLoggedIn") == "true")
         {
             int yemekCount = _context.urunler.Where(x => x.kategoriId == 1).Count();
             int alkolCount = _context.urunler.Where(x => x.kategoriId == 2).Count();
@@ -70,18 +73,23 @@ public class AdminController : Controller
 
     public async Task<IActionResult> Menu(string category)
     {
-        ViewBag.category = category;
-    
-        if(category == "hepsi")
+        if(HttpContext.Session.GetString("IsUserLoggedIn") == "true")
         {
-           var allProduct = await _context.urunler.ToListAsync();
-           return View(allProduct);
+            ViewBag.category = category;
+        
+            if(category == "hepsi")
+            {
+                var allProduct = await _context.urunler.ToListAsync();
+                return View(allProduct);
+            }else{
+                var filteredProduct = await _context.urunler
+                                            .Include(x => x.Tablo)
+                                            .Where(x => x.Tablo.tabloName == category)
+                                            .ToListAsync();
+                return View(filteredProduct);
+            }
         }else{
-            var filteredProduct = await _context.urunler
-                                        .Include(x => x.Tablo)
-                                        .Where(x => x.Tablo.tabloName == category)
-                                        .ToListAsync();
-            return View(filteredProduct);
+            return View("Index");
         }
       
     }  

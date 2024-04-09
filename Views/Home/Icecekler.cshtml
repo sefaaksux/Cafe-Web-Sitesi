@@ -1,3 +1,4 @@
+@model List<Urun>
 @{
     Layout = "_LayoutMenu";
 }
@@ -38,308 +39,54 @@
 <div class="detail-card" id="sicak">aa</div>
 
 <section>
-    <div class="detail-img">
+    <div class="detail-img"id="sicak">
         <h1 class="title-b">SICAK İÇECEKLER</h1>
         <img src="~/images/sicak.jpg" alt="">
     </div>
     
     <div class="detail-wrapper">
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Americano</h4>
-                    <p class="price">₺ 65</p>
+        @foreach(var item in Model)
+        {
+            if(item.tabloId == 18)
+            {
+                <div class="detail-card">
+                    <div class="detail-desc">
+                        <div class="detail-name">
+                            <h4>@item.Name</h4>
+                            <p class="detail-sub">@item.Description</p>
+                            <p class="price">@item.Amount</p>
+                        </div>
+                        
+                    </div>
                 </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Espresso</h4>
-                    <p class="price">₺ 60</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Double Espresso</h4>
-                    <p class="price">₺ 75</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Filtre Kahve</h4>
-                    <p class="price">₺ 75</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Sıcak Çikolata</h4>
-                    <p class="price">₺ 75</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Cappucino</h4>
-                    <p class="price">₺ 70</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Latte</h4>
-                    <p class="price">₺ 75</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Karamel Latte</h4>
-                    <p class="price">₺ 80</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Çay</h4>
-                    <p class="price">₺ 20</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Türk Kahvesi</h4>
-                    <p class="price">₺ 45</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card" id="soguk">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Bitki Çayları</h4>
-                    <p class="price">₺ 70</p>
-                </div>
-                
-            </div>
-        </div>
+            }
+        } 
     </div>
 </section>
 
 <section class="aktif">
-    <div class="detail-img">
+    <div class="detail-img"id="soguk">
         <h1 class="title-b">SOĞUK İÇECEKLER</h1>
         <img src="~/images/sogukicecek.jpg" alt="">
     </div>
 
     <div class="detail-wrapper">
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Coca-Cola</h4>
-                    <p class="detail-sub">Coca-Cola ve Coca-Cola Zero</p>
-                    <p class="price">₺ 50</p>
+        @foreach(var item in Model)
+        {
+            if(item.tabloId == 19)
+            {
+                <div class="detail-card">
+                    <div class="detail-desc">
+                        <div class="detail-name">
+                            <h4>@item.Name</h4>
+                            <p class="detail-sub">@item.Description</p>
+                            <p class="price">@item.Amount</p>
+                        </div>
+                        
+                    </div>
                 </div>
-                
-            </div>
-        </div>
-
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Sprite</h4>
-                    <p class="price">₺ 50</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Fanta</h4>
-                    <p class="price">₺ 50</p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Fusetea</h4>
-                    <p class="detail-sub">Mango ve Şeftali</p>
-                    <p class="price">₺ 53</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Sade Soda</h4>
-                    <p class="price">₺ 40</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Meyveli Soda</h4>
-                    <p class="detail-sub">Limon, elma ve Karpuz & Çilek</p>
-                    <p class="price">₺ 45</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Limonata</h4>
-                    <p class="price">₺ 70</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Frozen</h4>
-                    <p class="detail-sub">Çilek,Karpuz,Kavun,Kivi,Elma, Ahududu ve Böğürtlen</p>
-                    <p class="price">₺ 70</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>RedBull</h4>
-                    <p class="detail-sub">Şekersiz, Hindistan Cevizli, Karpuzlu ve Klasik</p>
-                    <p class="price">₺ 80</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Muzlu Süt</h4>
-                    <p class="price">₺ 70</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Portakal Suyu</h4>
-                    <p class="price">₺ 80</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Alkolsüz Kokteyl</h4>
-                    <p class="price">₺ 80</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Ice Latte</h4>
-                    <p class="price">₺ 80</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Ice Caramel Latte</h4>
-                    <p class="price">₺ 85</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Milkshake</h4>
-                    <p class="price">₺ 75</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Cappy Meyve Suyu</h4>
-                    <p class="detail-sub">Vişne,Portakal,Şeftali</p>
-                    <p class="price">₺ 48</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Su (Damla Su)</h4>
-                    <p class="price">₺ 20</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Ice Americano</h4>
-                    <p class="price">₺ 80</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Ayran</h4>
-                    <p class="price">₺ 40</p>
-                </div>
-                
-            </div>
-        </div> 
-        <div class="detail-card">
-            <div class="detail-desc">
-                <div class="detail-name">
-                    <h4>Churcill</h4>
-                    <p class="price">₺ 45</p>
-                </div>
-                
-            </div>
-        </div> 
+            }
+        } 
     </div>
 </section>
 </div>

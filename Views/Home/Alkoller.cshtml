@@ -1,3 +1,4 @@
+@model List<Urun>
 @{
     Layout = "_LayoutMenu";
 }
@@ -45,912 +46,236 @@
                 <h2 class="main-title">Alkoller</h2>
                 <div class="detail-card" id="fbira">aa</div>
                 <section>
-                    <div class="detail-img">
+                    <div class="detail-img" id="fbira">
                         <h1 class="title-b">FIÇI BİRALAR</h1>
                         <img src="~/images/fbira.jpg" alt="">
                     </div>
                     
                     <div class="detail-wrapper">
-						<div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Fıçı 33 Cl</h4>
-                                    <p class="price">₺ 85</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Fıçı 50 Cl</h4>
-									<p class="price-a" style="text-decoration: line-through; font-size: 20px;">₺ 98</p>
-                                    <p class="price">₺ 88</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Fıçı 1 Lt</h4>
-									<p class="price-a" style="text-decoration: line-through; font-size: 20px;">₺ 196</p>
-                                    <p class="price">₺ 159</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="sbira">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Fıçı 3 Lt</h4>
-                                    <p class="detail-sub">Biraver ile servis edilir.</p>
-                                    <p class="price">₺ 515</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-						<div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Bud Fıçı 33 Cl</h4>
-                                    <p class="price">₺ 90</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Bud Fıçı 50 Cl</h4>
-                                    <p class="price">₺ 105</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Bud Fıçı 1 Lt</h4>
-                                    <p class="price">₺ 190</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="sbira">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Bud Fıçı 3 Lt</h4>
-                                    <p class="detail-sub">Biraver ile servis edilir.</p>
-                                    <p class="price">₺ 550</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Becks Fıçı 33 Cl</h4>
-                                    <p class="price">₺ 90</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Becks Fıçı 50 Cl</h4>
-                                    <p class="price">₺ 105</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Becks Fıçı 1 Lt</h4>
-                                    <p class="price">₺ 190</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="sbira">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Becks Fıçı 3 Lt</h4>
-                                    <p class="price">₺ 550</p>
-                                </div>
-                                
-                            </div>
-                        </div>
+						@foreach(var item in Model)
+                                {
+                                    if(item.tabloId == 9)
+                                    {
+                                        <div class="detail-card">
+                                            <div class="detail-desc">
+                                                <div class="detail-name">
+                                                    <h4>@item.Name</h4>
+                                                    <p class="detail-sub">@item.Description</p>
+                                                    <p class="price">@item.Amount</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    }
+                                } 
                     </div>
                 </section>
 
                 <section class="aktif">
-                    <div class="detail-img">
+                    <div class="detail-img" id="sbira">
                         <h1 class="title-b">ŞİŞE BİRALAR</h1>
                         <img src="~/images/sbira.jpg" alt="">
                     </div>
             
                     <div class="detail-wrapper">
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Pilsen Serçe</h4>
-                                    <p class="price">₺ 90</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Pilsen +1</h4>
-                                    <p class="price">₺ 110</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Özel Seri</h4>
-                                    <p class="price">₺ 115</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Malt</h4>
-                                    <p class="price">₺ 110</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Efes Glutensiz</h4>
-                                    <p class="price">₺ 115</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Bud - 33cl</h4>
-                                    <p class="price">₺ 130</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Bud - 50cl</h4>
-                                    <p class="price">₺ 135</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Reserve</h4>
-                                    <p class="price">₺ 110</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Belfast</h4>
-                                    <p class="price">₺ 110</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Bomonti Filtresiz</h4>
-                                    <p class="price">₺ 115</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Amsterdam</h4>
-                                    <p class="price">₺ 160</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Grolsch</h4>
-                                    <p class="price">₺ 160</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Leffe Blonde</h4>
-                                    <p class="price">₺ 150</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Leffe Brune</h4>
-                                    <p class="price">₺ 150</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Hoegaarden</h4>
-                                    <p class="price">₺ 150</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Duvel</h4>
-                                    <p class="price">₺ 150</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Erdinger</h4>
-                                    <p class="price">₺ 150</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Corona</h4>
-                                    <p class="price">₺ 135</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Miller</h4>
-                                    <p class="price">₺ 130</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Beck's (33 cl)</h4>
-                                    <p class="price">₺ 130</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="sarap">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Beck's (50 cl)</h4>
-                                    <p class="price">₺ 135</p>
-                                </div>
-                                
-                            </div>
-                        </div>
+                        @foreach(var item in Model)
+                                {
+                                    if(item.tabloId == 10)
+                                    {
+                                        <div class="detail-card">
+                                            <div class="detail-desc">
+                                                <div class="detail-name">
+                                                    <h4>@item.Name</h4>
+                                                    <p class="detail-sub">@item.Description</p>
+                                                    <p class="price">@item.Amount</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    }
+                                } 
                     </div>
                 </section>
 
                 <section class="aktif">
-                    <div class="detail-img">
+                    <div class="detail-img" id="sarap">
                         <h1 class="title-b">ŞARAPLAR</h1>
                         <img src="~/images/sarap.jpg" alt="">
                     </div>
             
                     <div class="detail-wrapper">
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Kırmızı Kadeh</h4>
-                                    <p class="price">₺ 175</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Beyaz Kadeh</h4>
-                                    <p class="price">₺ 175</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Tarçınlı Şarap Kadeh</h4>
-                                    <p class="price">₺ 180</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Roze Kadeh</h4>
-                                    <p class="price">₺ 180</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-img">
-                            <h1 class="title-b">ŞİŞE ŞARAPLAR</h1>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>SUVLA (Kalecik Karası)</h4>
-                                    <p class="price">₺ 950</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>SUVLA (Boğazkere Öküzgözü)</h4>
-                                    <p class="price">₺ 950</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>SUVLA (Karasakız)</h4>
-                                    <p class="price">₺ 950</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>SUVLA (Cabernat)</h4>
-                                    <p class="price">₺ 950</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>KABATEPE (Gelibolu)</h4>
-                                    <p class="price">₺ 950</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>NARİNCE (Emir)</h4>
-                                    <p class="price">₺ 950</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>KILITBAHIR(Rose)</h4>
-                                    <p class="price">₺ 950</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card" id="likor">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>KABATEPE (Blush)</h4>
-                                    <p class="price">₺ 950</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
+                        @foreach(var item in Model)
+                                {
+                                    if(item.tabloId == 11)
+                                    {
+                                        <div class="detail-card">
+                                            <div class="detail-desc">
+                                                <div class="detail-name">
+                                                    <h4>@item.Name</h4>
+                                                    <p class="detail-sub">@item.Description</p>
+                                                    <p class="price">@item.Amount</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    }
+                                } 
                     </div>
                 </section>
 
                 <section class="aktif">
-                    <div class="detail-img">
+                    <div class="detail-img" id="likor">
                         <h1 class="title-b">LİKÖRLER</h1>
                         <img src="~/images/likor.jpeg" alt="">
                     </div>
             
                     <div class="detail-wrapper">
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Safari</h4>
-                                    <p class="price">₺ 220</p>
+                        @foreach(var item in Model)
+                        {
+                            if(item.tabloId == 12)
+                            {
+                                <div class="detail-card">
+                                    <div class="detail-desc">
+                                        <div class="detail-name">
+                                            <h4>@item.Name</h4>
+                                            <p class="detail-sub">@item.Description</p>
+                                            <p class="price">@item.Amount</p>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Amaretto</h4>
-                                    <p class="price">₺ 190</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="vodka">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Bailey's</h4>
-                                    <p class="price">₺ 200</p>
-                                </div>
-                                
-                            </div>
-                        </div>
+                            }
+                        } 
                     </div>
                 </section>
 
                 <section class="aktif">
-                    <div class="detail-img">
+                    <div class="detail-img" id="vodka">
                         <h1 class="title-b">VODKALAR</h1>
                         <img src="~/images/vodka.jpeg" alt="">
                     </div>
             
                     <div class="detail-wrapper">
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Absolut Double</h4>
-                                    <p class="price">₺ 200</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="vermut">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Smirnoff Vodka</h4>
-                                    <p class="price">₺ 200</p>
-                                </div>
-                                
-                            </div>
-                        </div>
+                        @foreach(var item in Model)
+                                {
+                                    if(item.tabloId == 13)
+                                    {
+                                        <div class="detail-card">
+                                            <div class="detail-desc">
+                                                <div class="detail-name">
+                                                    <h4>@item.Name</h4>
+                                                    <p class="detail-sub">@item.Description</p>
+                                                    <p class="price">@item.Amount</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    }
+                                } 
                     </div>
                 </section>
 
                 <section class="aktif">
-                    <div class="detail-img">
+                    <div class="detail-img"id="vermut">
                         <h1 class="title-b">VERMUTLAR</h1>
                         <img src="~/images/vermut.webp" alt="">
                     </div>
             
                     <div class="detail-wrapper">
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Martini Extra</h4>
-                                    <p class="price">₺ 190</p>
+                        @foreach(var item in Model)
+                        {
+                            if(item.tabloId == 14)
+                            {
+                                <div class="detail-card">
+                                    <div class="detail-desc">
+                                        <div class="detail-name">
+                                            <h4>@item.Name</h4>
+                                            <p class="detail-sub">@item.Description</p>
+                                            <p class="price">@item.Amount</p>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Martini Rosso</h4>
-                                    <p class="price">₺ 190</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="viski">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Martini Rosato</h4>
-                                    <p class="price">₺ 190</p>
-                                </div>
-                                
-                            </div>
-                        </div>
+                            }
+                        } 
                     </div>
                 </section>
 
                 <section class="aktif">
-                    <div class="detail-img">
+                    <div class="detail-img" id="viski">
                         <h1 class="title-b">VİSKİLER</h1>
                         <img src="~/images/viski.jpg" alt="">
                     </div>
             
                     <div class="detail-wrapper">
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Chivas Regal Double</h4>
-                                    <p class="price">₺ 300</p>
+                        @foreach(var item in Model)
+                        {
+                            if(item.tabloId == 15)
+                            {
+                                <div class="detail-card">
+                                    <div class="detail-desc">
+                                        <div class="detail-name">
+                                            <h4>@item.Name</h4>
+                                            <p class="detail-sub">@item.Description</p>
+                                            <p class="price">@item.Amount</p>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Jack Daniels Double</h4>
-                                    <p class="price">₺ 300</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Jack Daniels Apple Double</h4>
-                                    <p class="price">₺ 300</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Ballı Jack Double</h4>
-                                    <p class="price">₺ 300</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Black Label Double</h4>
-                                    <p class="price">₺ 280</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Jim Beam Double</h4>
-                                    <p class="price">₺ 280</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Woodford Double</h4>
-                                    <p class="price">₺ 280</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Centilmen Double</h4>
-                                    <p class="price">₺ 280</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="cin">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Jamesson Double </h4>
-                                    <p class="price">₺ 280</p>
-                                </div>
-                                
-                            </div>
-                        </div>
+                            }
+                        } 
                     </div>
                 </section>
 
                 <section class="aktif">
-                    <div class="detail-img">
-                        <h1 class="title-b">GİNLER</h1>
+                    <div class="detail-img" id="cin">
+                        <h1 class="title-b">CİNLER</h1>
                         <img src="~/images/gin.jpg" alt="">
                     </div>
             
                     <div class="detail-wrapper">
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Gilbey's Double</h4>
-                                    <p class="price">₺ 200</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card" id="ks">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Gordon's Double</h4>
-                                    <p class="price">₺ 200</p>
-                                </div>
-                                
-                            </div>
-                        </div>
+                        @foreach(var item in Model)
+                                {
+                                    if(item.tabloId == 16)
+                                    {
+                                        <div class="detail-card">
+                                            <div class="detail-desc">
+                                                <div class="detail-name">
+                                                    <h4>@item.Name</h4>
+                                                    <p class="detail-sub">@item.Description</p>
+                                                    <p class="price">@item.Amount</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    }
+                                } 
                     </div>
                 </section>
 
                 <section class="aktif">
-                    <div class="detail-img">
+                    <div class="detail-img" id="ks">
                         <h1 class="title-b">KOKTEYL / SHOTLAR</h1>
                         <img src="~/images/menu-img/shot-1.jpg" alt="">
                     </div>
             
                     <div class="detail-wrapper">
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Sex On The Beach</h4>
-                                    <p class="detail-sub">Votka(4cl), Tequila(2cl), Archers(2cl), Portakal Suyu, Grenadine</p>
-                                    <p class="price">₺ 280</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Mojito</h4>
-                                    <p class="detail-sub">Rom (6cl), Soda, Limon, Nane Yaprakları, Esmer Şeker</p>
-                                    <p class="price">₺ 240</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Cosmopolitan</h4>
-                                    <p class="detail-sub">Votka(4cl), Rom(2cl), Limon Suyu, Yapan Mersini Şurubu, Vişne Suyu</p>
-                                    <p class="price">₺ 260</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Margarita</h4>
-                                    <p class="detail-sub">Gin(5cl), P. Likörü(2cl), Tuz, Limon Suyu, Buz Parçaları</p>
-                                    <p class="price">₺ 240</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Long Island</h4>
-                                    <p class="detail-sub">Votka(4cl), Gin(2cl), P. Likörü(4cl), Tequila(2cl), Rom(2cl), Sweet & Sour Wix kola</p>
-                                    <p class="price">₺ 300</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Pina Colada</h4>
-                                    <p class="detail-sub">Rom(4cl), Malibu(2cl), Coconut, Süt, Ananas Suyu</p>
-                                    <p class="price">₺ 260</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Blue Hawaii</h4>
-                                    <p class="detail-sub">Rom(5cl), Malibu(2cl), Süt, Ananas Suyu, Blue Curacao</p>
-                                    <p class="price">₺ 250</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Tequila Sunrise</h4>
-                                    <p class="detail-sub">Tequila(5cl), P.Likörü(2cl), Portakal Suyu, Greenadine</p>
-                                    <p class="price">₺ 240</p>
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Gin Fizz</h4>
-                                    <p class="detail-sub">Gin(5cl), P.Likörü(2cl), Purdra Şekeri, Limon Suyu, Soda</p>
-                                    <p class="price">₺ 240</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Ballı Balyoz</h4>
-                                    <p class="detail-sub">Viski(3cl), Votka(5cl), Gin(3cl), Rom(2cl), Bal, Limon Suyu, Redbull</p>
-                                    <p class="price">₺ 330</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Blackberry</h4>
-                                    <p class="detail-sub">Votka, Tequila, P. Likörü, Yapan Mersini Şurubu</p>
-                                    <p class="price">₺ 260</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Lynchburg Lemonede</h4>
-                                    <p class="detail-sub">Jack(5cl), P.Liökürü(3cl), Sweet & Sour Mix, Lime, Sprite </p>
-                                    <p class="price">₺ 280</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Cuba Libre</h4>
-                                    <p class="detail-sub">Rom(6cl), Limon Suyu, Kola</p>
-                                    <p class="price">₺ 240</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Strawberry Daiquiri</h4>
-                                    <p class="detail-sub">Votka(2cl), Bacardi(6cl), Çilek Şurubu, Limon, Blender</p>
-                                    <p class="price">₺ 260</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Jager Bomb</h4>
-                                    <p class="detail-sub">Jagermeister(4cl), Redbull, Buz Parçaları</p>
-                                    <p class="price">₺ 190</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Sweet Heaven</h4>
-                                    <p class="detail-sub">Votka(4cl), Gin(2cl), Rom(2cl),P. Likörü, Yaban Mersini Şurubu,Sweet & Sour Mix, Ananas Suyu</p>
-                                    <p class="price">₺ 300</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-						<div class="detail-img">
-                            <h1 class="title-b">SHOTLAR</h1>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Olmeca Tekila</h4>
-                                    <p class="price">₺ 80</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Olmeca Gold</h4>
-                                    <p class="price">₺ 85</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Jagermeister</h4>
-                                    <p class="price">₺ 85</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Ballı Viski</h4>
-                                    <p class="price">₺ 85</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>B-52</h4>
-                                    <p class="detail-sub">Kahluo, Baileys, Cointrou</p>
-                                    <p class="price">₺ 85</p>        
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Beyin</h4>
-                                    <p class="detail-sub">Archers, Baileys, Grenadine</p>
-                                    <p class="price">₺ 85</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Votka Shot</h4>
-                                    <p class="price">₺ 85</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="detail-desc">
-                                <div class="detail-name">
-                                    <h4>Jamesson Shot</h4>
-                                    <p class="price">₺ 85</p>
-                                </div>
-                                
-                            </div>
-                        </div>
+                        @foreach(var item in Model)
+                                {
+                                    if(item.tabloId == 17)
+                                    {
+                                        <div class="detail-card">
+                                            <div class="detail-desc">
+                                                <div class="detail-name">
+                                                    <h4>@item.Name</h4>
+                                                    <p class="detail-sub">@item.Description</p>
+                                                    <p class="price">@item.Amount</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    }
+                                } 
                     </div>
                 </section>
             </div>

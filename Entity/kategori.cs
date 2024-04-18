@@ -4,5 +4,7 @@ namespace admin_panel.Entity
     {
         public int kategoriId { get; set; }
         public string? kategoriName { get; set; }
+
+        
     }
 }

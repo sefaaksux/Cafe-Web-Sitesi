@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css-menu\\style.css"
     },
     {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\MenuStyle.css",
+      "PackagePath": "staticwebassets\\css\\MenuStyle.css"
+    },
+    {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\myCss.css",
       "PackagePath": "staticwebassets\\css\\myCss.css"
     },
@@ -19,6 +23,10 @@
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\sb-admin-2.min.css",
       "PackagePath": "staticwebassets\\css\\sb-admin-2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\favicon.ico",
@@ -135,6 +143,10 @@
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\menu-img\\tatlı-3.jpg",
       "PackagePath": "staticwebassets\\images\\menu-img\\tatlı-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\rocksahne.webp",
+      "PackagePath": "staticwebassets\\images\\rocksahne.webp"
     },
     {
       "Id": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\salata.jpg",

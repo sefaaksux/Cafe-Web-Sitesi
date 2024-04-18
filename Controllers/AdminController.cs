@@ -36,8 +36,7 @@ public class AdminController : Controller
             {
                 var user = _context.users.Any(x => x.userName == model.userName && x.password == model.password);
                 if(user)
-                {
-                   
+                {              
                     HttpContext.Session.SetString("IsUserLoggedIn","true");
                     return View("AdminIndex");
                 }
@@ -51,17 +50,19 @@ public class AdminController : Controller
    
     public IActionResult AdminIndex()
     {
+        int yemekCount = _context.urunler.Where(x => x.kategoriId == 1).Count();
+        int alkolCount = _context.urunler.Where(x => x.kategoriId == 2).Count();
+        int icecekCount = _context.urunler.Where(x => x.kategoriId == 3).Count();
+        int extraCount = _context.urunler.Where(x => x.kategoriId == 4).Count();
+        int kampanyaCount = _context.urunler.Where(x => x.kategoriId == 5).Count();
+
         if(HttpContext.Session.GetString("IsUserLoggedIn") == "true")
         {
-            int yemekCount = _context.urunler.Where(x => x.kategoriId == 1).Count();
-            int alkolCount = _context.urunler.Where(x => x.kategoriId == 2).Count();
-            int icecekCount = _context.urunler.Where(x => x.kategoriId == 3).Count();
-            int extraCount = _context.urunler.Where(x => x.kategoriId == 4).Count();
-
             ViewBag.yemekCount = yemekCount;
             ViewBag.alkolCount = alkolCount;
             ViewBag.icecekCount = icecekCount;
             ViewBag.extraCount = extraCount;
+            ViewBag.kampanyaCount = kampanyaCount;
 
             return View();
         }else{
@@ -93,5 +94,16 @@ public class AdminController : Controller
         }
       
     }  
+
+    [HttpGet]
+    public IActionResult GetTablolarByKategoriId(int kategoriId)
+    {
+         var tablolar = _context.tablolar.Where(t => t.kategoriId == kategoriId).ToList();
+    
+        // JSON olarak tabloları dön
+        return Json(tablolar);
+    }
+
+    
 
 }

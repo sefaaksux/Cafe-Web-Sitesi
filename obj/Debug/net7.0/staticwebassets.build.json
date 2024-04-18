@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "smGfHYCuMP9WM/7Qokr+RIlN1I01GqV4oBHubKHd3dM=",
+  "Hash": "rigy9XpxXUgw3m8f33gTxOcdFtWsc+YwIMAqQ16Vksw=",
   "Source": "admin-panel",
   "BasePath": "_content/admin-panel",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css-menu\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\MenuStyle.css",
+      "SourceId": "admin-panel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\",
+      "BasePath": "_content/admin-panel",
+      "RelativePath": "css/MenuStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\MenuStyle.css"
     },
     {
       "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\myCss.css",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\sb-admin-2.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\css\\style.css",
+      "SourceId": "admin-panel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\",
+      "BasePath": "_content/admin-panel",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\favicon.ico",
@@ -576,6 +610,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\menu-img\\tatlı-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\rocksahne.webp",
+      "SourceId": "admin-panel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\",
+      "BasePath": "_content/admin-panel",
+      "RelativePath": "images/rocksahne.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\rocksahne.webp"
     },
     {
       "Identity": "C:\\Users\\sefaa\\OneDrive\\Masaüstü\\admin-panel\\wwwroot\\images\\salata.jpg",

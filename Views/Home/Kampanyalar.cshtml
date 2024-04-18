@@ -23,3 +23,34 @@
 @section iconKampanyalar {
     id="icon"
 }
+
+ <!---------menu food list---------->
+ <div class="divider"></div>
+ <div class="main-detail k-detail" id="k-detail">
+    <section id="et">
+        <div class="detail-img">
+            <h1 class="title-b">KAMPANYALAR</h1>
+            <img src="~/images/kampanya.jpg" alt="">
+        </div>
+        
+            <div class="detail-wrapper">
+                @foreach(var item in Model)
+                {
+                    if(item.tabloId == 23)
+                    {
+                        <div class="detail-card">
+                            <div class="detail-desc">
+                                <div class="detail-name">
+                                    <h4>@item.Name</h4>
+                                    <p class="price-a" style="text-decoration: line-through; font-size: 20px;">₺ @item.Description</p>
+                                    <p class="price">₺ @item.Amount</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                } 
+             </div>
+          
+    </section>
+</div>
+

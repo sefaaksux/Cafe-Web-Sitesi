@@ -64,7 +64,7 @@ public class UpdateController : Controller
                 }
             
             
-            return RedirectToAction("Index","Admin");
+            return RedirectToAction("AdminIndex","Admin");
         }else
         {
             return RedirectToAction("Index","Admin");

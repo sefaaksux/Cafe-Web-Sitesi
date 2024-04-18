@@ -20,7 +20,7 @@
             <ion-icon class="menu-clos" name="close-outline"></ion-icon>
         </div>
         <div class="mysidebar-menus">
-            <a href="index.html"><ion-icon name="home-outline"></ion-icon>Ana Sayfa</a>
+            <a asp-controller="Home" asp-action="Indexx"><ion-icon name="home-outline"></ion-icon>Ana Sayfa</a>
             <a href="./index.html #hakkımızda"><ion-icon name="people-outline"></ion-icon>Hakkımızda</a>
             <a href="./index.html #etkinlik"><ion-icon name="notifications-outline"></ion-icon>Etkinlikler</a>
             <a href="./index.html #iletisim"><ion-icon name="chatbubbles-outline"></ion-icon>İletişim</a>
@@ -41,44 +41,73 @@
                 <a href="./menu-kampanyalar.html" class="user"><img src="~/images/logo.webp" alt=""></a>
             </div>
         </div>
-        <!--main campanings-->
         <div class="main-campaigns">
             <div class="main-header">
-                <h2 class="main-title">Kampanyalar</h2>
+                <h2 class="main-title">Etkinlikler</h2>
             </div>
 
             <!--main campanings menü-->
 
-            <div class="campanings-wrapper">
-                <a href="./menu-kampanyalar.html">
-                    <div class="campanings-card">
-                        <img class="campanings-img" src="~/images/sbira.jpg" alt="">
-                        <div class="campanings-desc">
-                            <h4>2 Efes Fıçı <br>+ 1 Aperatif</h4>
-                            <p style="text-decoration: line-through;">₺416</p>
-                            <p>₺385</p>
-                        </div>
+            <div class="etkinlik-wrapper">
+                <div class="etkinlik-card" style="background-image: url(~/images/softicecek.jpg);">
+                    
+                    <div class="campanings-desc">
+                        <h4>Hafta içi her gün <br> Saat 10.00-14.00 arasında <br> ana yemeklerin yanında <br> soft içeceklerimiz ücretsizdir </h4>
+                        <p></p>
                     </div>
-                </a>
-                <a href="./menu-kampanyalar.html">
-                    <div class="campanings-card">
-                        <img class="campanings-img" src="~/images/sbira.jpg" alt="">
-                        <div class="campanings-desc">
-                            <h4>2 Efes Fıçı + 1 Pizza</h4>
-                            <p style="text-decoration: line-through;">₺411</p>
-                            <p>₺380</p>
-                        </div>
+                </div>
+ <div class="etkinlik-card" style="background-image: url(~/images/rocksahne.webp);">
+
+                    <div class="campanings-desc">
+                        <h4>Her cumartesi <br> Türkçe Rock <br> Canlı müzik performansı </h4>
                     </div>
-                </a>
-				<a href="./menu-kampanyalar.html">
-                    <div class="campanings-card">
-                        <img class="campanings-img" src="~/images/softicecek.jpg" alt="">
-                        <div class="campanings-desc">
-                            <h4>Hafta içi her gün saat 10.00-14.00 arasında</h4>
-                            <p>Ana yemeklerin yanında soft içecek üzcretsizdir</p>
-                        </div>
+                </div>
+                <div class="etkinlik-card" style="background-image: url(images/slowsahne.webp);">
+
+                    <div class="campanings-desc">
+                        <h4>Her salı ve cuma <br> Slow Türkçe <br> Canlı müzik performansı </h4>
                     </div>
-                </a>
+                </div>
+                <div class="etkinlik-card" style="background-image: url(images/menu-img/pizza-3.jpg);">
+
+                    <div class="campanings-desc">
+                        <h4>2 Efes Fıçı + 1 Pizza</h4>
+                        <p style="text-decoration: line-through;">₺411</p>
+                        <p>₺380</p>
+                    </div>
+                </div>
+ <div class="etkinlik-card" style="background-image: url(images/menu-img/aperatif.webp);">
+
+                    <div class="campanings-desc">
+                        <h4>2 Efes Fıçı + 1 Aperatif Tabağı</h4>
+                        <p style="text-decoration: line-through;">₺416</p>
+                        <p>₺385</p>
+                    </div>
+                </div>
+                <div class="etkinlik-card" style="background-image: url(images/menu-img/shot-1.jpg);">
+
+                    <div class="campanings-desc">
+                        <h4>4 + 2 Tequila </h4>
+                        <p style="text-decoration: line-through;">₺480</p>
+                        <p>₺320</p>
+                    </div>
+                </div>
+ <div class="etkinlik-card" style="background-image: url(images/fbira.jpg);">
+
+                    <div class="campanings-desc">
+                        <h4>50cl Efes Fıçı</h4>
+                        <p style="text-decoration: line-through;">₺98</p>
+                        <p>₺88</p>
+                    </div>
+                </div>
+                <div class="etkinlik-card" style="background-image: url(images/fbira.jpg);">
+
+                    <div class="campanings-desc">
+                        <h4>1L Efes Fıçı</h4>
+                        <p style="text-decoration: line-through;">₺196</p>
+                        <p>₺159</p>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -128,6 +157,7 @@
                     </a>
                 </div>
                 
+            </div>
                 @RenderBody()
                 
             

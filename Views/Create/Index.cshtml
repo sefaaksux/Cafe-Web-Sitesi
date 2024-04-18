@@ -2,59 +2,102 @@
     Layout = "_Dashboard";
     ViewData["Title"] = "Home Page";
 }
-@model Urun
+@model UrunViewModel
     <h2 style="text-align: center;" class="mt-3" style="font-weight: 900;">Yeni Ürün</h2>
     <hr>
     <div class="row" style="justify-content: center; margin-left: 5px;" >
         <div class="col-md-11" style="align-items:center;">
             <form class="form mt-3" asp-action="Index" asp-controller="Create" method="post">
-                <input type="hidden" asp-for="Id" /> <!-- Ürün ID'si (gizli alan) -->
+                <div asp-validation-summary="All"></div>
+                <!-- <input type="hidden" asp-for="Id" />--> <!-- Ürün ID'si (gizli alan) -->
                 
                 <div class="form-group">
                     <label asp-for="Name">Ürün Adı</label>
-                    <input asp-for="Name" class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                    
+                    <input asp-for="Name" class="form-control" />                                 
                 </div>
             
                 <div class="form-group">
                     <label asp-for="Description">Açıklama</label>
-                    <textarea asp-for="Description" class="form-control"></textarea>
-                    
-                    
+                    <textarea asp-for="Description" class="form-control"></textarea>                               
                 </div>
         
                 <div class="form-group">
                     <label asp-for="Amount">Fiyat</label>
-                    <input asp-for="Amount" class="form-control"></input>
-                    <span asp-validation-for="Amount" class="text-danger"></span>
-                   
+                    <input asp-for="Amount" class="form-control"></input>                           
                 </div>
 
-                
                 <div class="form-group">
                     <label asp-for="kategoriId">Kategori</label>
-                    <select id="kategoriSelect" asp-for="kategoriId" asp-items="ViewBag.Kategoriler" class="form-control" style="width: 250px;">  
+                    <select asp-for="kategoriId" asp-items="ViewBag.Kategoriler" class="form-control" style="width: 250px;">  
                         <option value="1">Seçiniz</option>                   
-                    </select>
-                    
-                    
+                    </select>                  
                 </div>
-                
+
                 <div class="form-group">
                     <label asp-for="tabloId">Tablo</label>
                     <select asp-for="tabloId" class="form-control"  asp-items="ViewBag.Tablolar" style="width: 250px;">
                         <option value="1">Seçiniz</option>
-                    </select>
-                   
-                    
+                    </select>                                 
                 </div>
-                <p>Eğer kategori ve tablo seçimi yapmaz iseniz otomatik olarak "Yemekler" "Aperatifler" alanına kayıt olacaktır.</p>
-                
-          
-                <button type="submit" class="btn btn-primary">Ekle</button>
+                <p>Eğer kategori ve tablo seçimi yapmaz iseniz otomatik olarak "Yemekler" "Aperatifler" alanına kayıt olacaktır.</p>            
+                  <button type="submit" class="btn btn-primary">Ekle</button>
             </form>
         </div>
     </div>
-        
 
+    @section JavaScriptt {
+        <script>
+                $(document).ready(function() {
+                    // İlk dropdown değiştiğinde çağrılacak işlev
+                    $('#kategoriId').change(function() {
+                        var kategoriId = $(this).val(); // Seçilen kategori ID'si
+                
+                        // AJAX isteğiyle kategoriye göre tabloları getir
+                        $.ajax({
+                            url: '/Admin/GetTablolarByKategoriId',
+                            type: 'GET',
+                            data: { kategoriId: kategoriId },
+                            success: function(response) {
+                                // İkinci dropdown'ı temizle
+                                $('#tabloId').empty();
+                
+                                // Tabloları ekle
+                                $.each(response, function(index, tablo) {
+                                    $('#tabloId').append('<option value="' + tablo.tabloId + '">' + tablo.tabloName + '</option>');
+                                });
+                            },
+                            error: function(xhr, status, error) {
+                                console.error(xhr.responseText);
+                            }
+                        });
+                    });
+                });
+            
+        </script>
+    }
+
+
+
+
+
+        <!-- <script>
+            $(document).ready(function () {
+                $("#kategoriId").change(function () {
+                    var kategoriId = $(this).val();
+                    if (kategoriId == 1) {
+                    // Eğer kategori "Yemekler" ise, tabloId'si 2, 3, 4, 5 ve 6 olan tabloların adlarını al ve seçenekleri doldur
+                    $.get("/Create/GetTableYemek", function(data) {
+                        $("#tabloId").empty(); // Önce tabloId seçimini temizle
+                        $("<option>").val("").text("Seçiniz").appendTo("#tabloId"); // Boş bir seçenek ekle
+                        data.forEach(function(table) {
+                            $("<option>").val(table.Id).text(table.Name).appendTo("#tabloId");
+                        });
+                    });
+                }
+                else if (kategoriId == 5) {
+                    // Eğer kategori "Kampanyalar" ise, tablo otomatik olarak "Özel Kampanya" olarak ayarlanır
+                    $("#tabloId").val(23);
+                }
+                });
+            });
+        </> -->

@@ -17,10 +17,13 @@ public class HomeController : Controller
     {
         _context = context;
     }
+    public IActionResult Indexx()
+    {   
+        return View();
+    }
     
     public IActionResult Index()
-    {
-        
+    { 
         var Yemekler = _context.urunler.Where(x => x.kategoriId == 1).ToList();
         return View(Yemekler);
     }

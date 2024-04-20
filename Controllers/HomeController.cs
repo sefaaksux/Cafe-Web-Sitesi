@@ -17,15 +17,19 @@ public class HomeController : Controller
     {
         _context = context;
     }
-    public IActionResult Indexx()
+    public IActionResult Index()
     {   
         return View();
     }
     
-    public IActionResult Index()
+    public IActionResult Menu()
     { 
         var Yemekler = _context.urunler.Where(x => x.kategoriId == 1).ToList();
         return View(Yemekler);
+    }
+    public IActionResult Deneme()
+    {       
+        return View();
     }
     public IActionResult Kampanyalar()
     {

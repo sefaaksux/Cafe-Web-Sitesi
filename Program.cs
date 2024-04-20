@@ -16,9 +16,6 @@ builder.Services.AddSession(Options => {
 
 });
 
-
-
-
 var app = builder.Build();
 app.UseSession();
 
@@ -39,6 +36,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Indexx}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

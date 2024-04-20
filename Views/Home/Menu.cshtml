@@ -1,0 +1,278 @@
+@model List<Urun>
+    @{
+        Layout = "_LayoutMenu";
+    }
+    
+    @section style {
+        <style>
+            #yemek{
+                background-color: var(--bg-color);
+                color: var(--witeColor);
+            }
+    
+            #yemek #icon{
+                background-color: var(--icon-bg);
+            }
+        </style>
+    }
+    
+    @section id {
+        id="yemek"
+    }
+    
+    @section icon {
+        id="icon"
+    }
+    
+    <hr class="divider">
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a class="active" href="#aperatif">Aperatifler</a></li>
+                            <li><a href="#tavuk">Tavuk Yemekleri</a></li>
+                            <li><a href="#et">Et Yemekleri</a></li>
+                            <li><a href="#pizza">Pizzalar</a></li>
+                            <li><a href="#makarna">Makarnalar</a></li>
+                            <li><a href="#krep">Krep</a></li>
+                            <li><a href="#sandivic">Sandiviçler</a></li>
+                            <li><a href="#corba">Çorbalar</a></li>
+                            <li><a href="#salata">Salatalar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!---------menu food list---------->
+                <div class="main-detail i-detail" id="i-detail">
+                    <h2 class="main-title">Yemekler</h2>
+                    <div class="detail-card" id="aperatif">aa</div>
+                    <section>
+                        <div class="detail-img">
+                            <h1 class="title-b">APERATİFLER</h1>
+                            <img src="~/images/menu-img/aperatif-1.jpg" alt="">
+                        </div>
+                        <div class="detail-wrapper">
+                        
+                            @foreach(var item in Model)
+                            {
+                                if(item.tabloId == 1)
+                                {
+                                    <div class="detail-card">
+                                        <div class="detail-desc">
+                                            <div class="detail-name">
+                                                <h4>@item.Name</h4>
+                                                <p class="detail-sub">@item.Description</p>
+                                                <p class="price">@item.Amount</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </section>
+    
+                    <section class="aktif">
+                        <div class="detail-img" id="tavuk">
+                            <h1 class="title-b">TAVUK YEMEKLERİ</h1>
+                            <img src="~/images/menu-img/t-sote-2.jpg" alt="">
+                        </div>
+                
+                        <div class="detail-wrapper">
+    
+                            @foreach(var item in Model)
+                            {
+                                if(item.tabloId == 2)
+                                {
+                                    <div class="detail-card">
+                                        <div class="detail-desc">
+                                            <div class="detail-name">
+                                                <h4>@item.Name</h4>
+                                                <p class="detail-sub">@item.Description</p>
+                                                <p class="price">@item.Amount</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                           
+                    </section>
+    
+                    <section class="aktif" >
+                        <div class="detail-img" id="et">
+                            <h1 class="title-b">ET YEMEKLERİ</h1>
+                            <img src="~/images/menu-img/et-1.jpg" alt="">
+                        </div>
+                            <div class="detail-wrapper">
+                                @foreach(var item in Model)
+                                    {
+                                        if(item.tabloId == 3)
+                                        {
+                                            <div class="detail-card">
+                                                <div class="detail-desc">
+                                                    <div class="detail-name">
+                                                        <h4>@item.Name</h4>
+                                                        <p class="detail-sub">@item.Description</p>
+                                                        <p class="price">@item.Amount</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                            </div>
+                     
+                    </section>
+    
+                    <section class="aktif" >
+                        <div class="detail-img" id="pizza">
+                            <h1 class="title-b">PİZZALAR</h1>
+                            <img src="~/images/menu-img/pissa-2.jpg" alt="">
+                        </div>
+                           <div class="detail-wrapper">
+                                @foreach(var item in Model)
+                                    {
+                                        if(item.tabloId == 4)
+                                        {
+                                            <div class="detail-card">
+                                                <div class="detail-desc">
+                                                    <div class="detail-name">
+                                                        <h4>@item.Name</h4>
+                                                        <p class="detail-sub">@item.Description</p>
+                                                        <p class="price">@item.Amount</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                           </div>
+                    </section>
+    
+                    <section class="aktif">
+                        <div class="detail-img" id="makarna">
+                            <h1 class="title-b">MAKARNALAR</h1>
+                            <img src="~/images/menu-img/makarna-1.jpg" alt="">
+                        </div>
+                            <div class="detail-wrapper">
+                                @foreach(var item in Model)
+                                    {
+                                        if(item.tabloId == 5)
+                                        {
+                                            <div class="detail-card">
+                                                <div class="detail-desc">
+                                                    <div class="detail-name">
+                                                        <h4>@item.Name</h4>
+                                                        <p class="detail-sub">@item.Description</p>
+                                                        <p class="price">@item.Amount</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                            </div>
+                    </section>
+                    
+                    <section class="aktif">
+                        <div class="detail-img" id="krep">
+                            <h1 class="title-b">KREPLER</h1>
+                            <img src="~/images/menu-img/krep.jpg" alt="">
+                        </div>
+                            <div class="detail-wrapper">
+                                @foreach(var item in Model)
+                                    {
+                                        if(item.tabloId == 22)
+                                        {
+                                            <div class="detail-card">
+                                                <div class="detail-desc">
+                                                    <div class="detail-name">
+                                                        <h4>@item.Name</h4>
+                                                        <p class="detail-sub">@item.Description</p>
+                                                        <p class="price">@item.Amount</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                            </div>
+                       
+                    </section>
+    
+                    <section class="aktif" >
+                        <div class="detail-img" id="sandivic">
+                            <h1 class="title-b">SANDVİÇLER</h1>
+                            <img src="~/images/menu-img/sandvic.webp" alt="">
+                        </div>
+    
+                           <div class="detail-wrapper">
+                                @foreach(var item in Model)
+                                    {
+                                        if(item.tabloId == 6)
+                                        {
+                                            <div class="detail-card">
+                                                <div class="detail-desc">
+                                                    <div class="detail-name">
+                                                        <h4>@item.Name</h4>
+                                                        <p class="detail-sub">@item.Description</p>
+                                                        <p class="price">@item.Amount</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                           </div>
+                        
+                    </section>
+    
+                    <section class="aktif" >
+                        <div class="detail-img" id="corba">
+                            <h1 class="title-b">ÇORBALAR</h1>
+                            <img src="~/images/corba.jpg" alt="">
+                        </div>
+                            <div class="detail-wrapper">
+                                @foreach(var item in Model)
+                                {
+                                    if(item.tabloId == 7)
+                                    {
+                                        <div class="detail-card">
+                                            <div class="detail-desc">
+                                                <div class="detail-name">
+                                                    <h4>@item.Name</h4>
+                                                    <p class="detail-sub">@item.Description</p>
+                                                    <p class="price">@item.Amount</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                    </section>
+    
+                    <section class="aktif" >
+                        <div class="detail-img" id="salata">
+                            <h1 class="title-b">SALATALAR</h1>
+                            <img src="~/images/salata.jpg" alt="">
+                        </div>    
+                                <div class="detail-wrapper">           
+                                    @foreach(var item in Model)
+                                    {
+                                        if(item.tabloId == 8)
+                                        {
+                                            <div class="detail-card">
+                                                <div class="detail-desc">
+                                                    <div class="detail-name">
+                                                        <h4>@item.Name</h4>
+                                                        <p class="detail-sub">@item.Description</p>
+                                                        <p class="price">@item.Amount</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        }
+                                    }    
+                                </div>                                 
+                    </section>
+                </div>

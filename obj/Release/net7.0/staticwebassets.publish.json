@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "Hash": "210msCZVuXO3+DyiDr6et8ZDkp8Cs+6O4aZQL4pE0oA=",
+  "Hash": "e4JQBy2q0OQyZNgw3rN/OxYkGXhATGMr9Y9ykDtYkSc=",
   "Source": "admin-panel",
   "BasePath": "_content/admin-panel",
   "Mode": "Default",
-  "ManifestType": "Build",
+  "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {

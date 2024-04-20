@@ -5,6 +5,7 @@ namespace admin_panel.Data
 {
     public class MyContext : DbContext
     {
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS; Database=sherlock; TrustServerCertificate=True; Integrated Security = True ");

@@ -1,4 +1,6 @@
-﻿@{
+﻿@using admin_panel.Models
+@model admin_panel.Models.CountViewModel
+@{
     Layout = "_Dashboard";
     ViewData["Title"] = "Admin Page";
 }
@@ -20,6 +22,7 @@
     </div>
     <div class="col-md-2 mt-3">
         <a asp-controller="Create" asp-action="Index" class="btn btn-primary">Yeni Ürün Ekle</a>
+        <a asp-controller="Create" asp-action="Kampanya" asp-route-category="kampanya" class="btn btn-primary">Kampanya Ekle</a>
     </div>
     <div class="mt-3"><p> (Ürünler <b>güncellemek</b> veya <b>silmek</b> isterseniz, yan taraftaki kategoriler ile ürün seçimi yapınız.)</p></div>
     
@@ -34,7 +37,12 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                             Yemekler (Adet)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.yemekCount</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            @if (Model != null && Model.IcecekCount != null)
+                            {
+                              @Model.YemekCount
+                            }
+                        </div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -52,7 +60,13 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             İÇECEKLER (ADET)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.icecekCount</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        
+                            @if (Model != null && Model.IcecekCount != null)
+                            {
+                              @Model.IcecekCount
+                            }
+                        </div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -71,7 +85,12 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                             ALKOLLER (ADET)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.alkolCount</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            @if (Model != null && Model.IcecekCount != null)
+                            {
+                              @Model.AlkolCount
+                            }
+                        </div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -89,7 +108,12 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                             EXTRALAR (ADET)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.extraCount</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            @if (Model != null && Model.IcecekCount != null)
+                            {
+                              @Model.ExtraCount
+                            }
+                        </div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -106,7 +130,12 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             KAMPANYALAR (ADET)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.kampanyaCount</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            @if (Model != null && Model.IcecekCount != null)
+                            {
+                              @Model.KampanyaCount
+                            }
+                        </div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-calendar fa-2x text-gray-300"></i>

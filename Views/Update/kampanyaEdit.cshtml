@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "_Dashboard";
+    ViewData["Title"] = "Home Page";
+}
+@model Urun
+
+    <h2 style="text-align: center;" class="mt-3" style="font-weight: 900;">Güncelleme</h2>
+    <hr>
+    <div class="row" style="justify-content: center; margin-left: 5px;" >
+        <div class="col-md-11" style="align-items:center;">
+            <form class="form mt-3" asp-action="Index" asp-controller="Update" method="post">
+                <input type="hidden" asp-for="Id" /> <!-- Ürün ID'si (gizli alan) -->
+            
+                <div class="form-group">
+                    <label asp-for="Name">Kampanya Adı</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            
+                <div class="form-group">
+                    <label asp-for="Description">Fiyat</label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+        
+                <div class="form-group">
+                    <label asp-for="Amount">Kampanyalı Fiyat</label>
+                    <input asp-for="Amount" class="form-control"></input>
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    
+                    <select asp-for="kategoriId" class="form-control" style="width: 250px;" hidden>  
+                        <option value="5"></option>                   
+                    </select>                  
+                </div>
+
+                <div class="form-group">
+                    
+                    <select asp-for="tabloId" class="form-control" style="width: 250px;" hidden>
+                        <option value="23"></option>
+                    </select>                                 
+                </div>
+                
+          
+                <button type="submit" class="btn btn-primary">Güncelle</button>
+            </form>
+        </div>
+    </div>
+    
+

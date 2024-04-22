@@ -13,11 +13,13 @@ namespace admin_panel.Controllers;
 
 public class AdminController : Controller
 {
+    
 
     private readonly MyContext _context;
     public AdminController(MyContext context)
     {
         _context = context;
+        
      
     }
 
@@ -28,16 +30,17 @@ public class AdminController : Controller
     }
     [HttpPost]
     
-    public IActionResult Index(LoginViewModel model)
+    public async Task<IActionResult> Index(LoginViewModel model)
     {
         if(ModelState.IsValid)
         {
             if(!string.IsNullOrEmpty(model.userName) && !string.IsNullOrEmpty(model.password))
             {
-                var user = _context.users.Any(x => x.userName == model.userName && x.password == model.password);
+                var user =await _context.users.AnyAsync(x => x.userName == model.userName && x.password == model.password);
                 if(user)
                 {              
                     HttpContext.Session.SetString("IsUserLoggedIn","true");
+                    
                     return View("AdminIndex");
                 }
                 
@@ -48,27 +51,29 @@ public class AdminController : Controller
     }
 
    
-    public IActionResult AdminIndex()
+    public async Task<IActionResult> AdminIndex()
     {
-        int yemekCount = _context.urunler.Where(x => x.kategoriId == 1).Count();
-        int alkolCount = _context.urunler.Where(x => x.kategoriId == 2).Count();
-        int icecekCount = _context.urunler.Where(x => x.kategoriId == 3).Count();
-        int extraCount = _context.urunler.Where(x => x.kategoriId == 4).Count();
-        int kampanyaCount = _context.urunler.Where(x => x.kategoriId == 5).Count();
-
-        if(HttpContext.Session.GetString("IsUserLoggedIn") == "true")
+        string? Giris = HttpContext.Session.GetString("IsUserLoggedIn");  
+        if(Giris != null)
         {
-            ViewBag.yemekCount = yemekCount;
-            ViewBag.alkolCount = alkolCount;
-            ViewBag.icecekCount = icecekCount;
-            ViewBag.extraCount = extraCount;
-            ViewBag.kampanyaCount = kampanyaCount;
-
-            return View();
+            
+            if(Giris == "true")
+            {               
+                var viewModel = new CountViewModel
+                    {
+                        YemekCount =await _context.urunler.Where(x => x.kategoriId == 1).CountAsync(),
+                        AlkolCount = await _context.urunler.Where(x => x.kategoriId == 2).CountAsync(),
+                        IcecekCount = await _context.urunler.Where(x => x.kategoriId == 3).CountAsync(),
+                        ExtraCount = await _context.urunler.Where(x => x.kategoriId == 4).CountAsync(),
+                        KampanyaCount =await  _context.urunler.Where(x => x.kategoriId == 5).CountAsync() 
+                    };
+                 return View(viewModel);
+            }else{
+                return RedirectToAction("Index");
+            }
         }else{
             return RedirectToAction("Index");
-        }
-        
+        }        
     }
    
 

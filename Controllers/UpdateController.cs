@@ -29,12 +29,43 @@ public class UpdateController : Controller
                             .Include(x => x.Kategori)
                             .FirstOrDefaultAsync(x => x.Id == id);
 
+                            
+
                 ViewBag.Tablolar = new SelectList(_context.tablolar.ToList(),"tabloId","tabloName");
                 ViewBag.Kategoriler = new SelectList(_context.kategoriler.ToList(),"kategoriId","kategoriName"); 
                 if (product == null)
                 {
                     return NotFound(); // Ürün bulunamazsa hata sayfasına yönlendirme yapabilirsiniz
                 }
+                if(product.kategoriId == 5)
+                {
+                    return RedirectToAction("kampanyaEdit", new { id = product.Id });
+                }
+            
+            return View(product);
+        }else
+        {
+            return RedirectToAction("Index","Admin");
+        }
+        
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> kampanyaEdit(int id)
+    {   
+        if(HttpContext.Session.GetString("IsUserLoggedIn") == "true")
+        {
+                    var product =await _context.urunler
+                            .Include(x => x.Tablo)
+                            .Include(x => x.Kategori)
+                            .FirstOrDefaultAsync(x => x.Id == id);
+
+                            
+                if (product == null)
+                {
+                    return NotFound(); // Ürün bulunamazsa hata sayfasına yönlendirme yapabilirsiniz
+                }
+                
             
             return View(product);
         }else
